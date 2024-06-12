@@ -3,6 +3,20 @@ var mainBgColor = "black";
         var currentMode = "text";
         var currentLang = "english";
 
+        function langDropdownHide() {
+            var english_option = document.getElementById('dropBtn1');
+            var chinese_option = document.getElementById('dropBtn2');
+            english_option.style.display = 'block';
+            chinese_option.style.display = 'block';
+
+            if (currentLang.toLowerCase() == "english") {
+                english_option.style.display = 'none';
+            }
+            else {
+                chinese_option.style.display = 'none';
+            }
+        }
+
         document.querySelectorAll('.dropdown-content a').forEach(item => {
         item.addEventListener('click', function() {
             document.getElementById('langSelect').style.display = 'none';
@@ -33,17 +47,11 @@ var mainBgColor = "black";
         });
 
         $("#langDropdown").hover(function () {
-            var english_option = document.getElementById('dropBtn1');
-            var chinese_option = document.getElementById('dropBtn2');
-            english_option.style.display = 'block';
-            chinese_option.style.display = 'block';
+            langDropdownHide();
+        });
 
-            if (currentLang.toLowerCase() == "english") {
-                english_option.style.display = 'none';
-            }
-            else {
-                chinese_option.style.display = 'none';
-            }
+        $("#langDropdown").on("click", function () {
+            langDropdownHide();
         });
 
         document.querySelectorAll('.color-content li').forEach(item => {
