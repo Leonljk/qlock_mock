@@ -267,6 +267,7 @@ td {
 
 .headerTable {
     font-size: 1vw !important;
+    width: 100%
 }
 
 #stars {
