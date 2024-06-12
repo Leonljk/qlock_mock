@@ -21,10 +21,9 @@
     <div>
         <table class="headerTable">
             <tr>
-                <td style="width: 5%;">
-                    <div class="wrapper_color" id="colorSelectCol">
+                <td id="colorSelectCol" class="wrapper_color" style="width: 5%;">
                         <button id="backgroundButton" class="black-mode"></button>
-                        <div id="colorSelect">
+                        <div id="colorSelect" class="color-content">
                             <ul>
                                 <li class="black" id="bl"></li><br>
                                 <li class="white" id="w"></li><br>
@@ -36,7 +35,6 @@
                                 <li class="star" id="s"></li>
                             </ul>
                         </div>
-                    </div>
                 </td>
                 <td id="langDropdown" class="dropdown" style="width: 7%;">
                     <button id="dropTitle" class="dropbtn">Language</button>
@@ -45,9 +43,9 @@
                         <a id="dropBtn2" href="#" class="chinese">中文</a>
                     </div>
                 </td>
-                <td style="width: 25%;"><div id="textmode" class="col modeText" onclick="changeMode('text')">Text Mode</div></td>
+                <td style="width: 25%; text-align: right;"><div id="textmode" class="col modeText" onclick="changeMode('text')">Text Mode</div></td>
                 <td style="width: 25%;"><div id="secondmode" class="col modeText" onclick="changeMode('second')">Seconds Mode</div></td>
-                <td style="width: 25%;"><div id="lightmode" class="col modeText" onclick="changeMode('light')">Light Mode</div></td>
+                <td style="width: 25%; text-align: left;"><div id="lightmode" class="col modeText" onclick="changeMode('light')">Light Mode</div></td>
                 <td style="width: 13%;"><div id="clock" class="col" align="center"></div></td>
             </tr>
         </table>

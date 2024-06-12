@@ -3,6 +3,18 @@ var mainBgColor = "black";
         var currentMode = "text";
         var currentLang = "english";
 
+        document.querySelectorAll('.dropdown-content a').forEach(item => {
+        item.addEventListener('click', function() {
+            document.getElementById('langSelect').style.display = 'none';
+        });
+        });
+        document.getElementById('langDropdown').addEventListener('mouseover', function() {
+        document.getElementById('langSelect').style.display = 'block';
+        });
+        document.getElementById('langDropdown').addEventListener('mouseleave', function() {
+        document.getElementById('langSelect').style.display = 'none';
+        });
+
         $("#langSelect").on("click", "a", function () {
             document.getElementById("dropTitle").innerHTML = this.innerHTML;
 
@@ -32,6 +44,23 @@ var mainBgColor = "black";
             else {
                 chinese_option.style.display = 'none';
             }
+        });
+
+        document.querySelectorAll('.color-content li').forEach(item => {
+        item.addEventListener('click', function() {
+            document.getElementById('colorSelect').style.display = 'none';
+        });
+        });
+        document.getElementById('colorSelectCol').addEventListener('mouseover', function() {
+        document.getElementById('colorSelect').style.display = 'block';
+        });
+        document.getElementById('colorSelectCol').addEventListener('mouseleave', function() {
+        document.getElementById('colorSelect').style.display = 'none';
+        });
+
+        $("#backgroundButton").on("click", function () {
+            document.getElementById("colorSelect").style.display = 'block';
+            console.log("backgroundButton clicked!!!");
         });
 
         $("#colorSelect li").hover(function () {
@@ -399,7 +428,6 @@ var mainBgColor = "black";
         }
 
         function runText() {
-            console.log(this.currentLang);
             // Get current time
             clearLight();
             var d = new Date();

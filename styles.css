@@ -267,7 +267,7 @@ td {
 }
 
 .headerTable {
-    font-size: 1vw !important;
+    font-size: 1.5vw !important;
     width: 100%
 }
 
@@ -1021,7 +1021,7 @@ li:hover {
     padding: 10px;
     /* font-size: 15px; */
     border: none;
-    width: 100px;
+    width: 100%;
     text-align: center;
 }
 
@@ -1056,3 +1056,32 @@ li:hover {
 .dropdown:hover .dropbtn {
     background-color: #FFFFFF00;
 }
+
+.leftMode{
+    text-align: right;
+}
+
+.rightMode{
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .headerTable {
+        font-size: 2vw !important;
+        width: 100%
+    }
+
+    #backgroundButton {
+        width: 3vw;
+        height: 4vw;
+        border-radius: 100%;
+        border-style: double;
+        /* margin: 5px; */
+        border-color: white;
+    }
+
+    .myTable {
+        font-size: 2vh;
+    }
+
+  }
